@@ -5,8 +5,20 @@ import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } 
 
 const router = createBrowserRouter([
   {
-    path: '/', element: <Layout/>, children: [
-      { index: true }, // default route
+    path: '/', 
+    element: <Layout/>, 
+    children: [
+      { path: "",
+       element: <Home />
+          },
+          { path: "about",
+          element: <About />
+          },
+          {
+            path: "contact",
+            element: <Contact />
+          }
+          ]
   }
 ])
 
